@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(5, 7, 13, 0.50),
+      rgba(5, 7, 13, 0.70)
+    ),
+    url("https://techcomposition.com/wp-content/uploads/2023/02/Netflix-Feature-1280x720.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.5;
+  z-index: -1;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left,
+      rgba(79, 124, 255, 0.18),
+      transparent 35%),
+    radial-gradient(circle at top right,
+      rgba(139, 92, 246, 0.12),
+      transparent 30%),
+    radial-gradient(circle at bottom right,
+      rgba(79, 124, 255, 0.08),
+      transparent 30%),
+    linear-gradient(
+      135deg,
+      #05070d,
+      #0b0f17 35%,
+      #111827 70%,
+      #0b0f17
+    );
+
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 255, 255, 0.03),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(79, 124, 255, 0.06),
+      transparent 25%
+    );
+}
+
+.container {
+  width: 92%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 3.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #d7dfff,
+    #ffffff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  text-align: center;
+  color: #a9b2c4;
+  font-size: 1.05rem;
+  margin-bottom: 40px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 55px;
+}
+
+.search-box input {
+  width: 450px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  background: rgba(20, 27, 41, 0.8);
+  backdrop-filter: blur(10px);
+
+  color: white;
+  font-size: 1rem;
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.search-box input:focus {
+  border-color: #4f7cff;
+  box-shadow: 0 0 20px rgba(79, 124, 255, 0.3);
+}
+
+.search-box input::placeholder {
+  color: #7b8190;
+}
+
+.search-box button {
+  padding: 15px 26px;
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #4f7cff,
+    #6c63ff
+  );
+
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.search-box button:hover {
+  transform: translateY(-2px) scale(1.04);
+
+  box-shadow:
+    0 8px 25px rgba(79, 124, 255, 0.35);
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: rgba(18, 24, 38, 0.85);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  backdrop-filter: blur(10px);
+
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(79, 124, 255, 0.15);
+
+  border-color: rgba(79, 124, 255, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h2 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.card-content h3 {
+  color: #9ca3af;
+  font-weight: 400;
+}
