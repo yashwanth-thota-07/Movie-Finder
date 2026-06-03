@@ -1,6 +1,5 @@
 import React from 'react'
-import Search from './Search'
-import Api from './api'
+import Api from './Api'
 
 const App = () => {
   return (
