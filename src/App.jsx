@@ -1,12 +1,16 @@
-import React from 'react'
-import Api from './Api'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Api from "./Api";
+import MovieDetails from "./MovieDetails";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <Api />
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Api />} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
